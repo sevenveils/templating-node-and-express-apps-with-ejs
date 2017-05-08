@@ -1,8 +1,10 @@
+/* app.js */
+
 // require and instantiate express
-const app = require('express')()
+var app = require('express')()
 
 // fake posts to simulate a database
-const posts = [
+var posts = [
   {
     id: 1,
     author: 'John',
@@ -41,7 +43,7 @@ app.get('/', (req, res) => {
 // blog post
 app.get('/post/:id', (req, res) => {
   // find the post in the `posts` array
-  const post = posts.filter((post) => {
+  var post = posts.filter((post) => {
     return post.id == req.params.id
   })[0]
 
